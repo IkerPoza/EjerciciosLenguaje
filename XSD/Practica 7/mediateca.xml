@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mediateca 
+    xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "mediateca.xsd">
+        <libro idlibro="l01" prestado="si">
+              <titulo_l>Cien años de soledad</titulo_l>
+              <autor>Gabriel Garcia Marquez</autor>
+              <editor>Planeta</editor>
+        </libro>
+        <libro idlibro="l02" prestado="si">
+              <titulo_l>Pantaleon y las Vistadoras</titulo_l>
+              <autor>Mario Vargas LLosa</autor>
+              <editor>Rama</editor>
+        </libro>
+        <libro idlibro="l04" prestado="no">
+              <titulo_l>El nombre de la Rosa</titulo_l>
+              <autor>Umberto Ecco</autor>
+              <editor>Rama</editor>
+        </libro>
+        <libro idlibro="l05" prestado="si">
+              <titulo_l>Las uvas de la ira</titulo_l>
+              <autor>John Steinbeck</autor>
+              <editor>Circulo de Lectores</editor>
+        </libro>
+        <libro idlibro="l06" prestado="no">
+              <titulo_l>La Colmena</titulo_l>
+              <autor>Camilo Jose Cela</autor>
+              <editor>Planeta</editor>
+        </libro>
+        <pelicula idpeli="p01">
+              <titulo_p>El verdugo</titulo_p>
+              <director>berlanga</director>
+              <estreno>1963</estreno>
+        </pelicula>
+        <libro idlibro="l03" prestado="no">
+              <titulo_l>El ingenioso hidalgo Don Quijote de la Mancha</titulo_l>
+              <autor>Miguel de Cervante</autor>
+              <editor>Planeta</editor>
+        </libro>
+        <pelicula idpeli="p02">
+              <titulo_p>Bienvenido, Mister Marshall</titulo_p>
+              <director>berlanga</director>
+              <estreno>1952</estreno>
+        </pelicula>
+        <pelicula idpeli="p03">
+              <titulo_p>Apocalipsis Now</titulo_p>
+              <director>Francis Ford Coppola</director>
+              <estreno>1979</estreno>
+        </pelicula>
+        <pelicula idpeli="p04">
+              <titulo_p>El Resplandor</titulo_p>
+              <director>Stanley Kubrick</director>
+              <estreno>1980</estreno>
+        </pelicula>
+        <pelicula idpeli="p05">
+              <titulo_p>La escopeta nacional</titulo_p>
+              <director>berlanga</director>
+              <estreno>1977</estreno>
+        </pelicula>
+        <copyr>copyright</copyr>
+</mediateca>

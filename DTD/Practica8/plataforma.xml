@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plataforma SYSTEM "plataforma.dtd">
+<plataforma>
+    <curso id="c1" nivel="basico">
+        <titulo>Introducción a XML</titulo>
+        <profesor id="p1">
+            <nombre>Ana López</nombre>
+            <email>ana@academia.com</email>
+        </profesor>
+        <profesor id="p2">
+            <nombre>Ekaitz Zambrana </nombre>
+            <email>ezambrana@academia.com</email>
+        </profesor>
+        
+        <modulos>
+            <modulo id="m1">
+                <nombre>Fundamentos</nombre>
+                <leccion refModulo="m1">
+                    <titulo>¿Qué es XML?</titulo>
+                    <contenido>XML es un lenguaje de marcado.</contenido>
+                    <recursos>
+                        <recurso tipo="video"/>
+                        <recurso tipo="pdf"/>
+                    </recursos>
+                </leccion>
+                <leccion refModulo="m1">
+                    <titulo>Estructura básica</titulo>
+                    <contenido>Elementos, atributos y jerarquía.</contenido>
+                </leccion>
+            </modulo>
+            <modulo id="m2">
+                <nombre>DTD</nombre>
+                <leccion refModulo="m2">
+                    <titulo>Introducción a DTD</titulo>
+                    <contenido>DTD define la estructura de un XML.</contenido>
+                    <recursos>
+                        <recurso tipo="web"/>
+                    </recursos>
+                </leccion>
+            </modulo>
+        </modulos>
+        <estudiantes>
+            <estudiante estado="activo">
+                <nombre>Carlos Ruiz</nombre>
+                <email>carlos@email.com</email>
+                <progreso>75</progreso>
+                <tutor cod="p1" />
+            </estudiante>
+            <estudiante estado="activo">
+                <nombre>Lucía Pérez</nombre>
+                <email>lucia@email.com</email>
+                <tutor cod="p1" />
+            </estudiante>
+            <estudiante estado="inactivo">
+                <nombre>Mario Gómez</nombre>
+                <email>mario@email.com</email>
+                <progreso>20</progreso>
+                <tutor cod="p1 p2" />
+            </estudiante>
+        </estudiantes>
+    </curso>
+</plataforma>

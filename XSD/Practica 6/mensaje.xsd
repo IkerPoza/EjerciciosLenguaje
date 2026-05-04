@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mensaje" type="tMensaje"/>
+
+    <xs:complexType name="tMensaje">
+        <xs:sequence>
+            <xs:element name="para" type="tPara"/>
+            <xs:element name="de" type="tDe"/>
+            <xs:element name="asunto" type="tAsunto"/>
+            <xs:element name="cuerpo" type="xs:string"/>
+            <xs:element name="fecha" type="xs:date"/>
+            <xs:element name="hora" type="xs:time"/>
+            <xs:element name="precio" type="tPrecio"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tPara">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pedro"/>
+            <xs:enumeration value="Juan"/>
+            <xs:enumeration value="Antonio"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tDe">
+        <xs:restriction base="xs:string">
+            <xs:length value="5"></xs:length>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tAsunto">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]*"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tPrecio">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="20"/>
+            <xs:maxInclusive value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

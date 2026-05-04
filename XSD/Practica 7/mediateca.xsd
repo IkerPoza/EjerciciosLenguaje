@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mediateca" type="tMediateca"/>
+    <xs:complexType name="tMediateca">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="libro" type="tLibro"/>
+                <xs:element name="pelicula" type="tPelicula"/>
+            </xs:choice>
+            <xs:element name="copyr" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tLibro">
+        <xs:sequence>
+            <xs:element name="titulo_l" type="xs:string"/>
+            <xs:element name="autor" type="xs:string"/>
+            <xs:element name="editor" type="tEditor"/>
+        </xs:sequence>
+        <xs:attribute name="idlibro" type="xs:ID" use="required"/>
+        <xs:attribute name="prestado" type="tPrestado"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tEditor">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Planeta"/>
+            <xs:enumeration value="Rama"/>
+            <xs:enumeration value="Circulo de Lectores"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tPrestado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="si"/>
+            <xs:enumeration value="no"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="tPelicula">
+        <xs:sequence>
+            <xs:element name="titulo_p" type="xs:string"/>
+            <xs:element name="director" type="xs:string"/>
+            <xs:element name="estreno" type="tEstreno"/>
+        </xs:sequence>
+        <xs:attribute name="idpeli" type="xs:ID" use="required"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="tEstreno">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2012"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "practica6.dtd">
+<agenda>
+    <persona id="p1">
+        <nombre>Alberto</nombre>
+        <email>albert@email.com</email>
+        <relacion amigo_de="p2" />
+    </persona>
+    <persona id="p2">
+        <nombre>Sandro</nombre>
+        <relacion enemigo_de="p4" />
+    </persona>
+    <persona id="p3" sexo="mujer">
+        <nombre>Maria</nombre>
+        <email>maria@email.com</email>
+    </persona>
+    <persona id="p4">
+        <nombre>Felipe</nombre>
+        <relacion amigo_de="p3" />
+    </persona>
+</agenda>

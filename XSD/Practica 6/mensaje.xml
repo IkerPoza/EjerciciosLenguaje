@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mensaje id="M_01"
+    xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "mensaje.xsd">
+        <para>Juan</para>
+        <de>Pedro</de>
+        <asunto>Recordatorio</asunto>
+        <cuerpo>¡No olvides comprar el pan para la cena! </cuerpo>
+        <fecha>2011-11-30</fecha>
+        <hora>13:00:30</hora>
+        <precio>25</precio>
+</mensaje>

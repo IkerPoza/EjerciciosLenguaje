@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<transporte 
+    xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "transporte1.xsd">
+      <coche>Renault R23</coche>
+      <tren>Talgo</tren>
+      <tren>Alvia</tren>
+      <avion>Boing</avion>
+      <coche>Renault R7</coche>
+      <avion>Boing</avion>
+      <avion>Boing</avion>
+</transporte>

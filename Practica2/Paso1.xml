@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listafaltas>
+    <asignatura>
+        <nombre>Matematicas</nombre>
+        <curso identificacion = "2">
+            <grupo letra = "A">
+                <alumno>
+                    <nombre>Ibon</nombre>
+                    <apellido>Fernandez</apellido>
+                    <fecha>12/12/10</fecha>
+                    <hora>12:00</hora>
+                </alumno>
+                <alumno>
+                    <nombre>Elisa</nombre>
+                    <apellido>Ruiz</apellido>
+                    <fecha>18/12/10</fecha>
+                    <hora>13:00</hora>
+                </alumno>
+            </grupo>
+        </curso>
+        <curso identificacion = "2">
+            <grupo letra = "B">
+                <alumno>
+                    <nombre>Maite</nombre>
+                    <apellido>Elkorobarrutia</apellido>
+                    <fecha>15/12/10</fecha>
+                    <hora>14:00</hora>
+                </alumno>
+            </grupo>
+        </curso>
+        <curso identificacion = "3">
+            <grupo letra = "A">
+                <alumno>
+                    <nombre>Miren</nombre>
+                    <apellido>Luarizaristi</apellido>
+                    <fecha>17/12/10</fecha>
+                </alumno>
+            </grupo>
+        </curso>
+    </asignatura>
+    <asignatura>
+        <nombre>Informatica</nombre>
+        <curso identificacion = "2">
+            <grupo letra = "A">
+                <alumno>
+                    <nombre>Jose</nombre>
+                    <apellido>Alonoso</apellido>
+                    <fecha>12/12/10</fecha>
+                    <hora>12:00</hora>
+                </alumno>
+                <alumno>
+                    <nombre>Gorka</nombre>
+                    <apellido>Ruiz</apellido>
+                    <fecha>18/12/10</fecha>
+                    <hora>11:00</hora>
+                </alumno>
+            </grupo>
+        </curso>
+        <curso identificacion = "2">
+            <grupo letra = "B">
+            <alumno>
+                <nombre>Jokin</nombre>
+                <apellido>Viana</apellido>
+                <fecha>13/12/10</fecha>
+                <hora>09:00</hora>
+            </alumno>
+            <alumno>
+                <nombre>Amaia</nombre>
+                <apellido>Jaso</apellido>
+                <fecha>15/12/10</fecha>
+                <hora>10:00</hora>
+            </alumno>
+            </grupo>
+        </curso>    
+    </asignatura>
+</listafaltas>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro" type="tLibro"/>
+    <xs:complexType name="tLibro">
+        <xs:all>
+            <xs:element name="titulo"/>
+            <xs:element name="autor"/>
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

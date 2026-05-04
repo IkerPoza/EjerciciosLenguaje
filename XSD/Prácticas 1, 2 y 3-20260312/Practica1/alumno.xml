@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alumno dni="12345679F"
+    xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "alumno.xsd" >
+            <nombre>Juan</nombre>
+            <apellidos>García García</apellidos>
+            <nacim>2013</nacim>
+</alumno>

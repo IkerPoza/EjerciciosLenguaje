@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+    <pedido codigo = "p01">
+        <producto codigo = "872-AA">
+            <nombre>Cortadora</nombre>
+            <precio>148.95</precio>
+            <modelo>Electrico</modelo>
+            <unidades>1</unidades>
+        </producto>
+        <producto codigo = "926-FH">
+            <nombre>podadora</nombre>
+            <precio>7.98</precio>
+            <unidades>3</unidades>
+        </producto>
+        <detallesPedido>
+            <fechapedido>20/02/2012</fechapedido>
+            <cliente>
+                <nombre>Ricardo</nombre>
+                <apellido>Movilla</apellido>
+            </cliente>
+            <envio>
+                <ciudad>Pamplona</ciudad>
+                <direccion>Plaza de la Duquesa 12</direccion>
+                <codigopostal>31010</codigopostal>
+            </envio>
+            <facturacion>
+                <ciudad>Vitoria</ciudad>
+                <direccion>Avenida Gasteiz 56</direccion>
+                <codigopostal>01012</codigopostal>
+
+            </facturacion>
+        </detallesPedido>
+    </pedido>
+</pedidos>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hojaPedido fechaPedido="1999-10-20"
+    xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "pedido.xsd" >
+    <enviarA pais="EEUU">
+        <nombre>Alice Smith</nombre>
+        <calle>123 Maple Street</calle>
+        <ciudad>Mill Valley</ciudad>
+        <estado>CA</estado>
+        <zip>90952</zip>
+    </enviarA>
+    <facturarA pais="EEUU">
+        <nombre>Robert Smith</nombre>
+        <calle>8 Oak Avenue</calle>
+        <ciudad>Old Town</ciudad>
+        <estado>PA</estado>
+        <zip>95819</zip>
+    </facturarA>
+    <comentario>¡Deprisa, mi césped parece una selva!</comentario>
+    <elementos>
+        <elemento numProducto="N872-AA">
+            <nombreProducto>Cortacesped</nombreProducto>
+            <cantidad>1</cantidad>
+            <precio>148.95</precio>
+            <comentario>Confirmar que es eléctrico</comentario>
+        </elemento>
+
+        <elemento numProducto="N926-AA">
+            <nombreProducto>Monitor para bebes</nombreProducto>
+            <cantidad>1</cantidad>
+            <precio>39.98</precio>
+            <fechaEnvio>1999-05-21</fechaEnvio>
+        </elemento>
+    </elementos>
+</hojaPedido>

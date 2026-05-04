@@ -1,0 +1,23 @@
+<!ELEMENT plataforma (curso+)>
+<!ELEMENT curso (titulo, profesor+, modulos, estudiantes)>
+<!ATTLIST curso id ID #REQUIRED nivel (basico|intemedio|avanzado) #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT profesor (nombre, email)>
+<!ATTLIST profesor id ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT modulos (modulo+)>
+<!ATTLIST modulo id ID #REQUIRED>
+<!ELEMENT modulo (nombre, leccion+)>
+<!ATTLIST leccion refModulo IDREF #REQUIRED>
+<!ELEMENT leccion (titulo, contenido, recursos?)>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT recursos (recurso*)>
+<!ELEMENT recurso EMPTY>
+<!ATTLIST recurso tipo (video|pdf|web) #REQUIRED>
+<!ELEMENT estudiantes (estudiante+)>
+<!ELEMENT estudiante (nombre, email, progreso?, tutor)>
+<!ATTLIST estudiante estado (activo|inactivo) #REQUIRED>
+<!ELEMENT progreso (#PCDATA)>
+<!ELEMENT tutor EMPTY>
+<!ATTLIST tutor cod IDREFS #REQUIRED>

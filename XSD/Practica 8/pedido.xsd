@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="hojaPedido" type="thojaPedido"/>
+
+    <xs:complexType name="thojaPedido">
+        <xs:sequence>
+            <xs:element name="enviarA" type="tA"/>
+            <xs:element name="facturarA" type="tA"/>
+            <xs:element name="comentario" type="xs:string" minOccurs="0"/>
+            <xs:element name="elementos" type="telementos"/>
+        </xs:sequence>
+        <xs:attribute name="fechaPedido" type="xs:date"/>
+    </xs:complexType>
+
+    <xs:complexType name="tA">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="calle" type="xs:string"/>
+            <xs:element name="ciudad" type="xs:string"/>
+            <xs:element name="estado" type="xs:string"/>
+            <xs:element name="zip" type="tzip"/>
+        </xs:sequence>
+        <xs:attribute name="pais" type="tpais"/>
+    </xs:complexType>
+
+    <xs:simpleType name="tpais">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EEUU"/>
+            <xs:enumeration value="CHINA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tzip">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="telementos">
+        <xs:sequence>
+            <xs:element name="elemento" type="telemento" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="telemento">
+        <xs:sequence>
+            <xs:element name="nombreProducto" type="xs:string"/>
+            <xs:element name="cantidad" type="tcantidad"/>
+            <xs:element name="precio" type="tprecio"/>
+            <xs:element name="comentario" type="xs:string" minOccurs="0"/>
+            <xs:element name="fechaEnvio" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="numProducto" type="tnumProducto" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <xs:simpleType name="tcantidad">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tprecio">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="6"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tnumProducto">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[A-Z][0-9]{3}-[A-Z]{2}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
