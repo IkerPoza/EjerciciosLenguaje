@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="productosfinancieros" type="tproductosfinancieros"/>
+
+    <xs:complexType name="tproductosfinancieros">
+        <xs:sequence>
+            <xs:element name="producto" type="tproducto" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tproducto">
+        <xs:choice>
+            <xs:element name="bono" type="tbono"/>
+            <xs:element name="futuro" type="tfuturo"/>
+            <xs:element name="acciones" type="tacciones"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="tbono">
+        <xs:sequence>
+            <xs:element name="valoractual" type="tvaloractual" minOccurs="0"/>
+            <xs:element name="beneficio" type="tbeneficio"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tfuturo">
+        <xs:sequence>
+            <xs:element name="elemento" type="telemento"/>
+            <xs:element name="beneficio" type="tbeneficio"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tacciones">
+        <xs:sequence>
+            <xs:element name="empresa" type="tempresa"/>
+            <xs:element name="beneficio" type="tbeneficio"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tvaloractual">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="moneda" type="tmoneda" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="telemento">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="idioma" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tempresa">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="pais" type="tpais" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="tbeneficio">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tmoneda">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dolares"/>
+            <xs:enumeration value="euros"/>
+            <xs:enumeration value="yenes"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tpais">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="usa"/>
+            <xs:enumeration value="alemania"/>
+            <xs:enumeration value="japon"/>
+            <xs:enumeration value="espana"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
