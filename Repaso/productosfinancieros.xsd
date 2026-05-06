@@ -20,21 +20,21 @@
     <xs:complexType name="tbono">
         <xs:sequence>
             <xs:element name="valoractual" type="tvaloractual" minOccurs="0"/>
-            <xs:element name="beneficio" type="tbeneficio"/>
+            <xs:element name="beneficio" type="xs:decimal"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="tfuturo">
         <xs:sequence>
             <xs:element name="elemento" type="telemento"/>
-            <xs:element name="beneficio" type="tbeneficio"/>
+            <xs:element name="beneficio" type="xs:decimal"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="tacciones">
         <xs:sequence>
             <xs:element name="empresa" type="tempresa"/>
-            <xs:element name="beneficio" type="tbeneficio"/>
+            <xs:element name="beneficio" type="xs:decimal"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -61,12 +61,6 @@
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-
-    <xs:simpleType name="tbeneficio">
-        <xs:restriction base="xs:decimal">
-            <xs:fractionDigits value="2"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:simpleType name="tmoneda">
         <xs:restriction base="xs:string">
